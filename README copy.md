@@ -1,4 +1,4 @@
-# BASE NESTJS MICROSERVICE
+# ST CRM
 
 ![NSAKE](https://img.shields.io/badge/nsake-000000.svg?style=for-the-badge&logo=teamcity&logoColor=white)
 
@@ -21,16 +21,26 @@
 | NODE_ENV                   | no       | node environment                  |
 | PORT                       | no       | application port for nodejs       |
 |                            |          |                                   |
+| BOT_TOKEN                  | yes      | telegram bot token                |
+| WEB_APP_URL                | yes      | link to app (front)               |
+|                            |          |                                   |
 | MONGODB_URI                | yes      | mongodb url                       |
 | MONGODB_POOL_SIZE          | no       | mongodb pool size                 |
 | MONGO_INITDB_ROOT_USERNAME | no       | monogodb root user                |
 | MONGO_INITDB_ROOT_PASSWORD | no       | mongodb roo password              |
+| REQUEST_ENC_KEY            | yes      | encryption key                    |
 |                            |          |                                   |
 | REDIS_HOST                 | yes      | redis host                        |
 | REDIS_PORT                 | yes      | redis port                        |
 |                            |          |                                   |
 | NATS_HOST                  | yes      | nats host                         |
 | NATS_PORT                  | yes      | nats port                         |
+|                            |          |                                   |
+| CHAT_MEMBER_BOT_TOKEN      |          |                                   |
+| TWITTER_BEARER_TOKEN       |          | twitter beaber token              |
+| TWITTER_ACCESS_TOKEN       |          | twitter beaber access token       |
+| TWITTER_API_KEY            |          | twitter api key                   |
+| TWITTER_API_KEY_SECRET     |          | twitter api key scret             |
 |                            |          |                                   |
 | DOCKER_BUILD_TARGET        | no       | docker target for build           |
 | DOCKER_API_HOST            | no       | docker api host                   |
@@ -98,9 +108,13 @@ yarn build: all
 
 # Run services in dev mode (include watch)
 yarn start:dev api
+yarn start:dev notification
+yarn start:dev game
 yarn start:dev user
 
 # Run services in prod mode
 yarn start:prod
+yarn start:prod notification
+yarn start:prod game
 yarn start:prod user
 ```

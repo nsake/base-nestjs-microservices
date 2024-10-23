@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+
+    "types": ["node", "fastify", "./libs/common/src/types/fastify"],
+
+    "paths": {
+      "@common": ["libs/common/src"],
+      "@common/*": ["libs/common/src/*"],
+
+      "@apps": ["apps"],
+      "@apps/*": ["apps/*"],
+
+      "@app/core": ["core/src"],
+      "@app/core/*": ["core/src/*"],
+
+      "@app/app-services": ["libs/app-services/src"],
+      "@app/app-services/*": ["libs/app-services/src/*"],
+
+      "@providers": ["libs/providers/src"],
+      "@providers/*": ["libs/providers/src/*"],
+
+      "@app/middlewares": ["libs/middlewares/src"],
+      "@app/middlewares/*": ["libs/middlewares/src/*"],
+
+      "@app/interceptors": ["libs/interceptors/src"],
+      "@app/interceptors/*": ["libs/interceptors/src/*"],
+
+      "@app/integrations": ["libs/integrations/src"],
+      "@app/integrations/*": ["libs/integrations/src/*"]
+    }
+  }
+}
